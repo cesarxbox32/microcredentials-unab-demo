@@ -1,0 +1,17 @@
+services:
+  demo:
+    build: ./frontend
+    ports: ["127.0.0.1:8080:80"]
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-sqlite:////data/microcred.db}
+      MICROCRED_ADMIN_TOKEN: ${MICROCRED_ADMIN_TOKEN:-}
+      MICROCRED_OPERATOR_TOKEN: ${MICROCRED_OPERATOR_TOKEN:-}
+      MICROCRED_AUDITOR_TOKEN: ${MICROCRED_AUDITOR_TOKEN:-}
+      SCHEDULER_MINUTES: ${SCHEDULER_MINUTES:-0}
+    ports: ["127.0.0.1:8000:8000"]
+    volumes:
+      - database:/data
+volumes:
+  database:

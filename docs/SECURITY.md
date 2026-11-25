@@ -1,0 +1,7 @@
+# Seguridad
+
+GitHub Pages sirve solo archivos estáticos con datos ficticios. La demo limita CSV y destinatarios a dominios `.example`, valida las entradas y escapa fórmulas en CSV exportado. La persistencia comparte el origen del navegador y constituye almacenamiento de demostración. Una prueba de correo genera un mensaje local. No se incluye ningún secreto ni credencial real en archivos, capturas, artefactos o historial.
+
+La API de laboratorio requiere tokens distintos por rol, definidos en variables de entorno. Un auditor consulta. Un operador ejecuta acciones simuladas. Un administrador modifica políticas y aprueba una rotación supervisada. Las operaciones REST son dry-run por defecto y requieren clave de idempotencia. Las restricciones únicas del inventario y del correo protegen contra duplicación en SQLite. Los adaptadores requieren credenciales, referencia contractual y activación administrativa para acceder a proveedores. La API publicada en código usa el proveedor simulado.
+
+Para un despliegue institucional se requieren OIDC con validación de emisor, audiencia, caducidad y roles; un buzón restringido; almacenamiento de secretos en Key Vault o identidad administrada cuando sea aplicable; cifrado y backups; retención y acceso a auditoría; y revisión de privacidad y seguridad. Aplicar autorización del lado servidor para cada cambio de estado. [Requisitos de producción](PRODUCTION_REQUIREMENTS.md)
